@@ -5,22 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Departmental Student Portal</title>
 <style>
-  body{font-family:Arial,sans-serif;margin:0;background:#f4f6f8;color:#222}
-  header{background:#0b5d3b;color:#fff;padding:24px;text-align:center}
-  main{padding:20px;max-width:600px;margin:auto}
-  .card{background:#fff;padding:16px;margin:12px 0;border-radius:8px;box-shadow:0 1px 4px #0002}
-  footer{text-align:center;padding:16px;font-size:13px;color:#666}
+  *{box-sizing:border-box}
+  body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:#eef2f1;color:#1f2a2e;line-height:1.5}
+  header{background:linear-gradient(135deg,#0b5d3b,#17a05d);color:#fff;padding:36px 20px;text-align:center;border-bottom-left-radius:24px;border-bottom-right-radius:24px}
+  header h1{margin:0 0 6px;font-size:26px;letter-spacing:.5px}
+  header p{margin:0;opacity:.9}
+  nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  nav a{background:#ffffff26;color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;font-size:14px;transition:.2s}
+  nav a:hover{background:#fff;color:#0b5d3b}
+  main{padding:20px;max-width:640px;margin:auto}
+  .card{background:#fff;padding:18px;margin:16px 0;border-radius:14px;border-left:5px solid #17a05d;box-shadow:0 2px 8px #0000001a;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 6px 14px #00000026}
+  .card h3{margin-top:0;color:#0b5d3b}
+  .btn{display:inline-block;background:#0b5d3b;color:#fff;text-decoration:none;padding:9px 18px;border-radius:8px;font-size:14px;margin-top:6px}
+  .btn:hover{background:#17a05d}
+  footer{text-align:center;padding:20px;font-size:13px;color:#667}
 </style>
 </head>
 <body>
 <header>
   <h1>Departmental Student Portal</h1>
   <p>Department of Computer Science, FUTO</p>
+  <nav>
+    <a href="#announcements">Announcements</a>
+    <a href="#materials">Materials</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 <main>
-  <div class="card"><h3>Announcements</h3><p>Welcome to the portal. Updates will appear here.</p></div>
-  <div class="card"><h3>Course Materials</h3><p>Lecture notes and past questions coming soon.</p></div>
-  <div class="card"><h3>Contact</h3><p>Reach the department via the NACOS CSC executives.</p></div>
+  <div class="card" id="announcements"><h3>Announcements</h3><p>Welcome to the portal. Updates will appear here.</p><a class="btn" href="#">View all</a></div>
+  <div class="card" id="materials"><h3>Course Materials</h3><p>Lecture notes and past questions coming soon.</p><a class="btn" href="#">Browse</a></div>
+  <div class="card" id="contact"><h3>Contact</h3><p>Reach the department via the NACOS CSC executives.</p></div>
 </main>
 <footer>Deployed with GitHub Pages</footer>
 </body>
